@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("./background_web\ .png"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    color: transparent;
+}
+
+#board{
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 2.8rem;
+    font-family: cursive;
+}
+
+h1{
+    font-family: serif;
+    font-size: 3rem;
+}
+
+
+.head {
+    transform: scale(1.02);
+    background-image: url("./Group\ 8060.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10%; 
+    background-size: 55px 65px;
+    transform: rotate(0deg); 
+    
+}
+
+
+.snake{
+    /* background-image: url(Ellipse\ 1848.png); */
+    /* border: .25vmin solid white; */
+    /* background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; */
+    background-size: 10%; 
+     background-size: 40px 50px;
+    transform: rotate(0deg); 
+    border-radius: 15px;
+    /* background: linear-gradient(#9FB709 26.54%, #828D0A 59.38%, #5D5E04 89.85%); */
+    background: radial-gradient(50% 50% at 50% 50%, #9FB709 26.54%, #828D0A 59.38%, #5D5E04 89.85%);
+
+
+}
+
+.food{
+    transform: scale(1.02);
+    background-image: url(apple.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10%; 
+    background-size: 40px 50px;
+    transform: rotate(0deg); 
+}
+
+
+#start-page{
+text-align: center; 
+padding: 20px;
+height: 100vh;
+overflow: hidden;
+background: url(./Tranh\ tường\ Đức\ Ca\ 0942192274.jpeg);
+}
+
+
+
+.img{
+    border-radius: 1rem; height: 35vh; width: 40vw;
+}
+
+
+#quiz {
+    border: 2px solid black;
+     background-color: #FFF; 
+     display: flex; 
+    flex-direction: column; 
+    height: 50rem;
+    width: 45rem;
+    z-index: 5;
+    position: absolute;
+    display: none;
+    border-radius: 1rem;
+    
+
+}
+
+#image{
+    height: 350px;
+    width: 370px;
+
+}
+
+#time-box{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px;
+}
+
+#option-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+
+.option {
+    padding: 6px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    background: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+}
+
+.options:hover{
+    background-color:rgba(0, 128, 0, 0.25) ;
+}
+
+#ques{
+text-align: justify;
+background-color: rgba(0, 128, 0, 0.357);
+margin-inline: 17px;
+font-size: 1.7rem;
+padding: 8px;
+margin-top: 10px;
+border-radius: 0.5rem;
+position: sticky;
+}
+
+
+.img-btn{
+    height: 10rem;
+    width: rem;
+}
+
+.option{
+    padding: 12px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    background: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+}
+
+#popup-page{
+    text-align: justify;
+    width: 70% !important; 
+}
+@media screen and (min-width:270px) and (max-width:767px) {
+    #popup-page{
+        width: 95% !important;
+    }
+}
+#instructions-1 {
+    text-align: justify;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-inline: 5px;
+}
+
+
+
+
+
+
+
+#heads{
+    text-align: justify;
+    font-size: 3rem;
+    color: rgb(71, 128, 71);
+}
+
+
+
+
+
+/* Add this CSS to your styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 10px;
+    text-align: center;
+}
+
+.close {
+    color: white;
+    left: 93%;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+    font-size: 4rem;
+}
+
+.close:hover {
+    color: #f2f2f29f;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+
+
+
+#text{
+    font-size: 5rem;
+}
+.image1{
+    height: 100vh;
+
+}
+
+#marks{
+    font-family: 'Lato', sans-serif;
+}
+
+
+#heading{
+    color: rgb(75, 128, 75);
+     font-size: 5rem;
+}
+
+
+
+
+
+
+
+/* Add this style to your existing styles or create a new style block */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2; /* Higher z-index to overlay the blurred background */
+}
+
+/* Add this style to blur the background */
+#startGame.blur {
+    filter: blur(5px);
+}
+
+
+
+@media (max-width: 480px){
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+body{
+     overflow: hidden;
+}
+
+#heads{
+    text-align: justify;
+    font-size: 1.5rem;
+    color: rgb(71, 128, 71);
+    }
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-family: cursive;
+}
+
+
+#quiz {
+    border: 2px solid black;
+     background-color: #FFF; 
+     display: flex; 
+    flex-direction: column; 
+    height: 37rem;
+    width: 22rem;
+    z-index: 5;
+    position: absolute;
+    display: none;
+    border-radius: 1rem; 
+
+}
+
+#image{
+    height: 230px;
+    width:273px;
+
+}
+
+#time-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+#option-container{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    gap: 3px;
+    margin-top: 2px;
+
+}
+
+.option{
+    text-align: justify;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: sticky;
+
+}
+
+.options:hover{
+    background-color:rgba(0, 128, 0, 0.25) ;
+}
+
+#ques{
+text-align: justify;
+background-color: rgba(0, 128, 0, 0.357);
+margin-inline: 10px;
+font-size: 1.3rem;
+padding: 10px;
+margin-top: 10px;
+border-radius: 0.5rem;
+position: sticky;
+}
+
+.img-btn{
+    height: 5rem;
+    width: 20rem;
+}
+
+
+#heading{
+    color: rgb(45, 132, 45);
+     font-size: 1.8rem;
+}
+
+.close {
+    color: white;
+    left: 86%;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+    font-size: 2.5rem;
+}
+
+#images{
+    height: 180px;
+}
+
+#instructions-1 {
+    /* text-align: justify; */
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    /* padding: 0; */
+}
+/* 
+.head {
+    transform: scale(1.02);
+    background-image: url("./snake_head\ \(1\).png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    background-position: center center;
+    background-size: 10%; 
+    background-size: 40px 50px;
+} */
+
+.head {
+    transform: scale(1.02);
+    background-image: url("./Group\ 8060.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 5%; 
+    background-size: 20px 35px;
+    transform: rotate(0deg); 
+    
+}
+.food{
+    transform: scale(1.02);
+    background-image: url(apple.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 7%; 
+    background-size: 20px 30px;
+    transform: rotate(0deg); 
+}
+
+
+}
+
+
+
+
+@media screen and (min-width: 480px) and (max-width: 980px) {
+    #heading{
+        font-size: 1rem; /* Adjust the font size as needed */
+    }
+}

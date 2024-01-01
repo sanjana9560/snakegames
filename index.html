@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeMania - Ek Gaming Katha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+
+    <div id="instructionModal" class="modal">
+        <div class="modal-content" id="popup-page">
+            <img id="start-img" src="Group 36275 (1).png" alt="">
+            <h1 id="heads">Instructions</h1>
+            <p id="instructions-1">Swipe on the screen in the direction you want the snake to move.</p>
+            <p id="instructions-1">Answer dynamically rendered questions to continue the game.</p>
+            <span class="close" onclick="closeInstructionModal()">&times;</span>
+            <!-- <p  id="close-btn" style="margin-inline: 35rem;" onclick="closeInstructionModal()">X</p> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Add this HTML modal at the end of your HTML body -->
+<div id="gameOverModal" class="modal">
+    <div class="modal-content" style="width: 70%;">
+        <img id="images" src="Group 36275 (1).png" alt="">
+        <h1  id="heading">GameOver</h1>
+        <p id="Marks">You have completed game successfully</p>
+        <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+        <!-- <p id="tanks">Thank you for attempting this assignment!</p> -->
+    </div>
+</div>
+
+
+    <div id="start-page"
+        style="text-align: center; padding: 20px; height: 100vh; overflow: hidden; background: url(./Tranh\ tường\ Đức\ Ca\ 0942192274.jpeg) center center / cover no-repeat;">
+        <div id="back-img"
+            style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10rem;">
+            <img src="./logo.png" alt="Start Image"
+                style="width: 300px; height: 300px; margin-bottom: 20px;">
+            <img src="./start button.png" alt=""class="img-btn" onclick=startGame()>
+        </div>
+    </div>
+
+    <div class="body" id="startGame" style="position: relative;">
+        <div id="scoreBox"></div>
+        <div id="hiscoreBox"></div>
+        <div id="board">
+        </div>
+<!-- 
+
+        <!-- Include jQuery from CDN -->
+
+        <div id="quiz">
+            <div id="time-box">
+            <img src="./Screenshot from 2023-12-22 12-44-11.png" alt="" id="image">
+            <div id="timer" class="timer">
+                <div class="time-text">
+                    <h4 id="timer-sec">00:00</h4>
+                </div>
+            </div>
+            </div>
+            <div id="ques"></div>
+            <div id="option-container">
+            <button class="option" id="ans1" onclick="option(1)"><span id="label1"></span></button>
+            <button class="option" id="ans2" onclick="option(2)"><span id="label2"></span></button>
+            <button class="option" id="ans3" onclick="option(3)"><span id="label3"></span></button>
+            <button class="option" id="ans4" onclick="option(4)"><span id="label4"></span></button>
+            </div>
+        </div>
+
+</body>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
